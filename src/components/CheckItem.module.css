@@ -1,0 +1,54 @@
+.checkWrapper{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: var(--gray-200);
+  font-weight: 400;
+}
+
+.checkWrapper .contentCheckItem{
+  width: 100%;
+}
+
+.checkWrapper.checkedItem .contentCheckItem{
+  text-decoration: line-through;
+  color: var(--gray-400);
+}
+
+.checkWrapper .buttonDelete{
+  line-height: 0;
+  padding: 0.3rem;
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;
+  color: var(--gray-200);
+  background-color: rgba(255,255,255,.1);
+}
+
+.checkWrapper .buttonDelete:hover{
+  background-color: rgba(255,255,255,.2);
+}
+
+.buttonCheckItem{
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid white;
+  border-radius: 3px;
+  position: relative;
+}
+
+.buttonCheckItem:checked::before{
+  content: "✔";
+  font-size: 0.7rem;
+  color: white;
+  position: absolute;
+  top: -1px;
+  left: 2px;
+}
